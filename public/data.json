@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Md Masum",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "category": "Development",
+    "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, React and Node.js.",
+    "image": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&q=80"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Johnson",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "category": "Design",
+    "description": "Master the art of UI/UX design with Figma, design principles, and real-world projects.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Strategy",
+    "instructor": "Mike Wilson",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "category": "Marketing",
+    "description": "Learn SEO, social media marketing, email campaigns and paid ads from industry experts.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "instructor": "Emily Chen",
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "category": "Development",
+    "description": "Master Python, Pandas, NumPy, and data visualization for data science careers.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80"
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design for Beginners",
+    "instructor": "Alex Turner",
+    "duration": "10 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "category": "Design",
+    "description": "Learn graphic design fundamentals using Adobe Photoshop and Illustrator.",
+    "image": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&q=80"
+  },
+  {
+    "id": 6,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "David Park",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "category": "Development",
+    "description": "Build modern web apps with React, Next.js, Tailwind CSS and deploy to production.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&q=80"
+  }
+]

@@ -5,13 +5,13 @@ import Image from "next/image";
 const Navbar = () => {
     const links = (
         <>
-            <li className="hover:text-orange-600">
+            <li className="hover:text-orange-600 font-medium">
                 <Link href={'/'}>Home</Link>
             </li>
-            <li className="hover:text-orange-600">
+            <li className="hover:text-orange-600 font-medium">
                 <Link href={'/courses'}>Courses</Link>
             </li>
-            <li className="hover:text-orange-600">
+            <li className="hover:text-orange-600 font-medium">
                 <Link href={'/myProfile'}>My Profile</Link>
             </li>
         </>
