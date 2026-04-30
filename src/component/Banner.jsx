@@ -72,6 +72,22 @@ export default function Banner() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <section className="py-10">
+  <h2 className="text-3xl font-bold text-center mb-10">🏆 Meet Our Top Instructors</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {/* একটি স্যাম্পল কার্ড */}
+    <div className="flex flex-col items-center p-6 bg-white border rounded-xl shadow-sm">
+      <div className="avatar mb-4">
+        <div className="w-24 rounded-full ring ring-orange-400 ring-offset-base-100 ring-offset-2">
+          <img src="https://i.pravatar.cc/150?u=1" alt="Instructor" />
+        </div>
+      </div>
+      <h3 className="font-bold text-xl">Dr. Rakib Hasan</h3>
+      <p className="text-gray-500">Web Development Expert</p>
+    </div>
+    {/* এভাবে আরও ৩টি কার্ড যোগ করবেন */}
+  </div>
+</section>
         </section>
     );
 }
