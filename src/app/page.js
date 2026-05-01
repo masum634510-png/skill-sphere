@@ -2,6 +2,7 @@ import Banner from "@/component/Banner";
 import LearningTips from "@/component/LearningTips";
 import PopularCourses from "@/component/PopularCourses";
 import TopInstructors from "@/component/TopInstructorsSection";
+import TrendingCourses from "@/component/TrendingCourses";
 import Image from "next/image";
 
 
@@ -12,6 +13,7 @@ export default function Home() {
      <PopularCourses></PopularCourses>
      <LearningTips></LearningTips>
      <TopInstructors></TopInstructors>
+     <TrendingCourses></TrendingCourses>
    </div>
   );
 }
