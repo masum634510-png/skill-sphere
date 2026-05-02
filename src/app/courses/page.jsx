@@ -9,7 +9,7 @@ const AllCoursesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/data.json",{cache:"no-store"})
+    fetch("https://skill-sphere-gamma.vercel.app/data.json",{cache:"no-store"})
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

@@ -4,7 +4,7 @@ import { FiClock } from "react-icons/fi";
 import Link from "next/link";
 
 const PopularCourses = async () => {
-  const res = await fetch("http://localhost:3000/data.json",{cache:"no-store"})
+  const res = await fetch("https://skill-sphere-gamma.vercel.app/data.json",{cache:"no-store"})
   const data = await res.json()
   const topCourse = data.sort((a, b) => b.rating - a.rating).slice(0, 3)
   
