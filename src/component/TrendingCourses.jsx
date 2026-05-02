@@ -40,7 +40,7 @@ const trending = [
 const TrendingCourses = () => {
     return (
         <div className="py-14">
-            <div className="text-center mb-10">
+            <div className="text-center mb-9">
                 <h2 className="text-3xl font-bold mb-2">🚀 Trending & New Releases</h2>
                 <p className="text-gray-500">Stay ahead with the latest and most popular courses</p>
             </div>
