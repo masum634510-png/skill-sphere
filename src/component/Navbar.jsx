@@ -1,8 +1,20 @@
+"use client";
+import { useSession, signOut } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import Link from "next/link";
 import Image from "next/image";
 
 
 const Navbar = () => {
+    const { data: session, isPending } = useSession();
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        await signOut();
+        toast.success("Logged out successfully!");
+        router.push("/");
+    };
     const links = (
         <>
             <li className="hover:text-orange-600 font-medium">
@@ -44,13 +56,13 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link href="/" className="flex items-center gap-1">                 
+                <Link href="/" className="flex items-center gap-1">
                     <Image
-                        src="/2.png" 
+                        src="/2.png"
                         alt="SkillSphere Logo"
                         width={40}
                         height={40}
-                        priority      
+                        priority
                     />
                     <h3 className="text-xl font-bold text-orange-500">SkillSphere</h3>
                 </Link>
@@ -60,9 +72,28 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end gap-4">
-                <p className="font-medium hover:text-orange-600">Login</p>
-                <a className="btn btn-sm bg-orange-500 hover:bg-orange-600 text-white">Register</a>
+            <div className="navbar-end gap-3">
+                {isPending ? (
+                    <span className="loading loading-spinner loading-sm text-orange-500"></span>
+                ) : session ? (
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="avatar cursor-pointer">
+                            <div className="w-9 rounded-full ring ring-orange-400 ring-offset-1">
+                                <img src={session.user.image || "https://i.pravatar.cc/40"} alt={session.user.name} />
+                            </div>
+                        </div>
+                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-10 w-48 p-2 shadow mt-2">
+                            <li className="text-sm px-3 py-1 text-gray-500 font-medium">{session.user.name}</li>
+                            <li><Link href="/myProfile">My Profile</Link></li>
+                            <li><button onClick={handleLogout} className="text-red-500">Logout</button></li>
+                        </ul>
+                    </div>
+                ) : (
+                    <>
+                        <Link href="/login" className="font-medium hover:text-orange-600">Login</Link>
+                        <Link href="/register" className="btn btn-sm bg-orange-500 hover:bg-orange-600 text-white">Register</Link>
+                    </>
+                )}
             </div>
         </div>
     );
