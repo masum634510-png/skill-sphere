@@ -64,7 +64,7 @@ const Navbar = () => {
                         height={40}
                         priority
                     />
-                    <h3 className="text-xl font-bold text-orange-500">SkillSphere</h3>
+                    <h3 className="text-xl font-bold text-orange-500">Skill<span className="text-xl font-bold text-black">Sphere</span> </h3>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

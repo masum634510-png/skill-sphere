@@ -1,11 +1,7 @@
-import React from 'react';
-
-const LoadingPage = () => {
+export default function Loading() {
     return (
-        <div className='text-center py-10'>
+        <div className='min-h-[calc(100vh-64px)] flex items-center justify-center'>
             <span className="loading loading-spinner text-success"></span>
         </div>
     );
-};
-
-export default LoadingPage;
+}

@@ -7,12 +7,22 @@ import Link from "next/link";
 const AllCoursesPage = () => {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://skill-sphere-gamma.vercel.app/data.json",{cache:"no-store"})
+    fetch("https://skill-sphere-gamma.vercel.app/data.json", {cache:"no-store"})
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) return (
+    <div className='min-h-[calc(100vh-64px)] flex items-center justify-center'>
+      <span className="loading loading-spinner text-success"></span>
+    </div>
+  );
 
   const filteredCourses = data.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -38,7 +48,7 @@ const AllCoursesPage = () => {
 
       {filteredCourses.length === 0 ? (
         <p className="text-center text-gray-400 mt-10">
-          No courses found for<span className="text-orange-400">{searchQuery}</span>"
+          No courses found for <span className="text-orange-400">{searchQuery}</span>
         </p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
